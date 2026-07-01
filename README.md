@@ -75,8 +75,7 @@ https://github.com/VikashSingh81/AI-Investment-Agent
 
 ## AI Layer
 
-* OpenRouter API
-* Large Language Models (LLMs)
+* Gemini API
 
 ## Deployment
 
@@ -112,7 +111,7 @@ npm install
 Create a `.env` file:
 
 ```env
-OPENROUTER_API_KEY=YOUR_API_KEY
+Gemini_API_KEY=YOUR_API_KEY
 ```
 
 Run backend:
@@ -150,21 +149,33 @@ http://localhost:5173
 ## Architecture
 
 ```text
-User
- ↓
-React Frontend
- ↓
-Axios API Request
- ↓
-Express Backend
- ↓
-Prompt Generation
- ↓
-OpenRouter AI Model
- ↓
-JSON Response
- ↓
-Frontend Dashboard
+                     User
+                       │
+                       ▼
+        ┌────────────────────────┐
+        │ React Frontend (Vite)  │
+        └────────────┬───────────┘
+                     │
+             Axios HTTP Request
+                     │
+                     ▼
+        ┌────────────────────────┐
+        │ Express.js Backend API │
+        └────────────┬───────────┘
+                     │
+          Generate Structured Prompt
+                     │
+                     ▼
+        ┌────────────────────────┐
+        │ Gemini / OpenRouter AI │
+        └────────────┬───────────┘
+                     │
+          JSON Investment Report
+                     │
+                     ▼
+        ┌────────────────────────┐
+        │ React Dashboard UI     │
+        └────────────────────────┘
 ```
 
 ## Workflow
@@ -354,6 +365,12 @@ https://github.com/VikashSingh81
 
 ✅ AI Integrated
 
-✅ Production Ready
-
 ✅ Assignment Submission Ready
+
+✅ Core Features Completed
+
+✅ Live Deployment Available
+
+✅ AI Integration Completed
+
+🚧 Future Enhancements Planned
